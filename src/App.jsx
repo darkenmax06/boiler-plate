@@ -1,3 +1,4 @@
+import {  MoveRight } from 'lucide-react'
 import './App.css'
 import { Button } from './components/buttons/Button'
 import { ButtonPrimary } from './components/buttons/ButtonPrimary'
@@ -14,7 +15,7 @@ function App() {
       <p className='body' >Lorem ipsum dolor sit amet <span className='headline' >consectetur</span> adipisicing elit. Sit perspiciatis pariatur error corporis rerum perferendis et quidem iure suscipit quo labore, quas earum at ipsa consectetur? Velit vero quam fugit.</p>
 
       <div>
-        <ButtonPrimary color="red" >red</ButtonPrimary>
+        <ButtonPrimary handleClick={()=> console.log("hola")} color="red" >botonClickeable <MoveRight/> </ButtonPrimary>
         <ButtonSecondary color="red" >red</ButtonSecondary>
         <ButtonPrimary color="yellow" >amarillo</ButtonPrimary>
         <ButtonSecondary color="yellow" >amarillo</ButtonSecondary>

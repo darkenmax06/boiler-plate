@@ -1,7 +1,6 @@
 import "./buttons.css"
 
-function Button ({children, background, border,text}){
-
+function Button ({children, background, border,text, handleClick}){
   const color = {
     "light-red": "var(--light-red)",
     "dark-red": "var(--dark-red)",
@@ -52,7 +51,7 @@ function Button ({children, background, border,text}){
     color: color[text] || "white"
   }
 
-  return <button style={style} className="button headline" >
+  return <button style={style} className="button headline" onClick={handleClick} >
     {children}
   </button>
 }

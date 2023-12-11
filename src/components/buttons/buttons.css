@@ -1,6 +1,10 @@
 .button{
   padding: var(--xs) var(--l);
   border-radius:var(--xs);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--s);
   background-color: transparent;
   border: none;
 }
