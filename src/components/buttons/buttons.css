@@ -1,0 +1,6 @@
+.button{
+  padding: var(--xs) var(--l);
+  border-radius:var(--xs);
+  background-color: transparent;
+  border: none;
+}
