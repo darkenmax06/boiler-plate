@@ -3,9 +3,9 @@ import { themeContext } from "../context/themeContext";
 
 
 function useTheme (){
-  const {isDark,setIsDark} = useContext(themeContext)
+  const {isDark,setColorTheme} = useContext(themeContext)
 
-  return {isDark,setIsDark}
+  return {isDark,setColorTheme}
 }
 
 export {useTheme}

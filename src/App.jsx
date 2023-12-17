@@ -1,14 +1,79 @@
-import {  MoveRight } from 'lucide-react'
+import {  Home, MoveRight, Settings, User } from 'lucide-react'
 import './App.css'
 import { Button } from './components/buttons/Button'
 import { ButtonPrimary } from './components/buttons/ButtonPrimary'
 import { ButtonSecondary } from './components/buttons/ButtonSecondary'
+import { useTheme } from './hooks/useTheme'
+import LeftMenu, { LeftMenuItem } from "./components/menus/LeftMenu"
+import TopMenu, { TopMenuItem } from "./components/menus/TopMenu"
 
 function App() {
+  const {isDark} = useTheme()
+
+  const style = {
+    background: isDark ? "var(--black2)": "var(--white1)",
+    color: isDark ? "var(--white1)": "var(--black2)"
+  }
 
   return (
-    <section >
-      <h1 className='header'>hola</h1>
+    <section style={style} >
+      {/* <TopMenu>
+        <MenuItem>
+          <Home />
+          inicio
+        </MenuItem>
+
+        <MenuItem>
+          <User/>
+          sobre nosotros
+        </MenuItem>
+
+        <MenuItem>
+          <Settings/>
+          utilidades
+        </MenuItem>
+      </TopMenu> */}
+      <LeftMenu>
+        <LeftMenuItem>
+          <Home/>
+          inicio
+        </LeftMenuItem>
+        <LeftMenuItem>
+          <User/>
+          sobre nosotros
+        </LeftMenuItem>
+        <LeftMenuItem>
+          <Settings/>
+          ajustes
+        </LeftMenuItem>
+      </LeftMenu>
+     <div className="content">
+      <TopMenu>
+        <TopMenuItem>
+          <Home/>
+          inicio
+        </TopMenuItem>
+
+
+        <TopMenuItem>
+          <Home/>
+          inicio
+        </TopMenuItem>
+
+
+        <TopMenuItem>
+          <Home/>
+          inicio
+        </TopMenuItem>
+
+
+        <TopMenuItem>
+          <Home/>
+          inicio
+        </TopMenuItem>
+      </TopMenu>
+
+     <h1 className='header'>hola</h1>
       <h2 className='header-secondary' >hola 2</h2>
       <h3 className='title' >title</h3>
       <h4 className='subtitle' >subtitle</h4>
@@ -39,6 +104,7 @@ function App() {
       <Button border="light-cian" background="transparent-cian" text="light-cian" >asd</Button>
       <Button border="light-blue" background="transparent-blue" text="light-blue" >asd</Button>
       </div>
+     </div>
     </section>
   )
 }

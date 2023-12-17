@@ -1,0 +1,79 @@
+.left-menu{
+  height: 100vh;
+  width: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  border-radius: 0 var(--xs) var(--xs) 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+
+  padding: 30px 10px;
+  overflow: hidden;
+  transition: width .3s ease-in-out ;
+
+  white-space: nowrap;
+  z-index: 20;
+}
+
+.left-menu.active{
+  width: 300px;
+  transition: width .8s ease-out ;
+}
+
+.left-menu__logo-container{
+  display: flex;
+  align-items: center;
+  gap: var(--m);
+}
+
+.left-menu__logo{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.left-menu__actions{
+  display: flex;
+  flex-direction: column;
+  gap: var(--s);
+  padding: var(--s) var(--xs);
+  border-radius: var(--xs);
+  width: 100%;
+  background-color: var(--gray1);
+}
+
+.left-menu__actions button{
+  color: inherit;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: var(--m);
+  width: 100%;
+}
+
+.left-menu__list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s);
+}
+
+
+.left-menu-item a{
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: var(--m);
+  color: inherit;
+  text-decoration: none;
+  padding: var(--xs);
+}
+
+
+
+

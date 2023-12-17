@@ -1,0 +1,99 @@
+.menu__container{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  background-color: var(--white2);
+  padding:var(--xs) var(--s);
+}
+
+.menu__toggle{
+  display: none;
+}
+
+.menu .margin{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu__logo-container{
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+
+.menu__logo{
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu__list{
+  display: flex;
+  flex-direction: row;
+  gap: var(--m);
+  transition: top .5s ease-in-out;
+  background: inherit;
+}
+
+.menu__actions{
+  display: flex;
+  gap: var(--s);
+}
+
+.menu__actions button{
+  background: transparent;
+  border: none;
+}
+
+
+
+
+@media (width <= 800px) {
+  .menu__toggle{
+    display: block;
+  }  
+
+  .menu__list{
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    z-index: -1;
+
+    height: calc(100vh - 60px);
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--l);
+    background-color: var(--background);
+  }
+  
+  .menu__list.active{
+    top: 60px;
+    transition: top 1s ease-in-out;
+  }
+  
+}
+
+/***/
+
+
+.menuItem{
+  list-style: none;
+}
+
+.menuItem a{
+  display: flex;
+  gap: var(--xs);
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
