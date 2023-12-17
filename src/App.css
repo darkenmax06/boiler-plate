@@ -1,9 +1,3 @@
-section{
-  position: relative;
-  display: grid;
-  grid-template-columns: 60px 1fr;
-}
-
 .content{
   padding: 40px;
 }

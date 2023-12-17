@@ -26,7 +26,7 @@ function LeftMenu ({children}){
     <header className="left-menu" style={style} >
       <div className="left-menu__logo-container">
         <img className="left-menu__logo"  src={vite} alt="logo" />
-        <h3 className="subtitle" >nombre</h3>
+        <h3 className="subtitle" >Nombre</h3>
       </div>
       <div className="left-menu__actions " style={actionStyles} >
         <button className="left-menu__toggle headline" onClick={toggleMenu} >

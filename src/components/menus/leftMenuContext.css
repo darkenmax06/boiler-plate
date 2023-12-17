@@ -1,0 +1,5 @@
+
+.left-menu-context{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
