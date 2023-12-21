@@ -1,0 +1,43 @@
+.input{
+  padding: var(--xs) var(--s);
+
+  display: flex;
+  align-items: center;
+  gap: var(--m);
+  width: 100%;
+  max-width: 400px;
+  min-width: 150px;
+  outline: 2px solid var(--border);
+}
+
+.input input{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: inherit;
+  font-size: 14px;
+  font-family: "semi-bold";
+  flex-grow: 1;
+  flex-shrink: 2;
+  width: 0;
+}
+
+.input input::placeholder{
+  color: inherit;
+}
+
+.input svg{
+  color: inherit;
+  flex-grow: 0;
+  flex-shrink: 0;
+  filter: opacity(.7);
+}
+
+
+.input.focus{
+  outline: 2px solid var(--focus);
+}
+
+.input.focus svg{
+  color: var(--focus);
+}

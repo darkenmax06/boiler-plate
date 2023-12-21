@@ -1,7 +1,7 @@
 import { useTheme } from "../../hooks/useTheme";
 import { Button } from "./Button";
 
-function ButtonPrimary ({color,children, handleClick}){
+function ButtonPrimary ({color = "blue",children, handleClick}){
   const {isDark} = useTheme()
 
   const background = isDark
