@@ -17,7 +17,7 @@ function Index (){
   
   return (
     <LeftMenuContext>
-      <section style={style} >
+      <section >
         <div className="content">
           <h1 className='header'>
             BOILER PLATE
