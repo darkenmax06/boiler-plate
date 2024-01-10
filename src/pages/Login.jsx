@@ -4,6 +4,11 @@ import { User, Lock, ArrowRight } from "lucide-react"
 import { ButtonPrimary } from "../components/buttons/ButtonPrimary"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import InputSuccessAlert from "../components/inputAlerts/InputSuccessAlert"
+import InputErrorAlert from "../components/inputAlerts/InputErrorAlert"
+import InputWarningAlert from "../components/inputAlerts/InputWarningAlert"
+import InputTipAlert from "../components/inputAlerts/InputTipAlert"
+import InputInfoAlert from "../components/inputAlerts/InputInfoAlert"
 
 function Login (){
   const navigate = useNavigate()
@@ -41,13 +46,15 @@ function Login (){
             placeholder="gmail" 
             type="gmail" 
             name="gmail" 
-            handleChange={handleChange} 
+            handleChange={handleChange}
+            full={true} 
             value={user.gmail} >
               <User/>
           </NormalInput>
           <NormalInput 
             placeholder="password" 
             type="password" 
+            full={true} 
             name="password"
             handleChange={handleChange} 
             value={user.password} >

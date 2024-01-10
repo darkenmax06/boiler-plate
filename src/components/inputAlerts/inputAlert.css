@@ -1,0 +1,20 @@
+.input-alert{
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  justify-items: center;
+  align-items: center;
+  padding: var(--s);
+  gap: var(--s);
+  background-color: var(--color);
+  border-radius: var(--xs);
+}
+
+.input-alert__icons{
+  display: grid;
+  place-content: center;
+}
+
+.input-alert__content{
+  text-align: start;
+  justify-self: start;
+}

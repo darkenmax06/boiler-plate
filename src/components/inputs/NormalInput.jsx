@@ -1,7 +1,15 @@
 import { useTheme } from "../../hooks/useTheme"
 import Input from "./Input"
 
-function NormalInput ({children, value , handleChange,placeholder, focus = "blue", type = "text", name}){
+function NormalInput ({
+  children, 
+  value , 
+  handleChange,
+  placeholder, 
+  focus = "blue", 
+  type = "text",
+  full, 
+  name}){
   const {isDark} = useTheme()
 
   const text = isDark ? "white1" : "black1"
@@ -10,6 +18,7 @@ function NormalInput ({children, value , handleChange,placeholder, focus = "blue
 
   return (
     <Input  
+      full={full}
       text={text} 
       background={background}
       type={type} 
@@ -18,7 +27,7 @@ function NormalInput ({children, value , handleChange,placeholder, focus = "blue
       name={name}
       handleChange={handleChange}
       placeholder={placeholder} >
-      {children}
+       {children}
    </Input>
   )
 }

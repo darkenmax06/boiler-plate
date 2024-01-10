@@ -1,7 +1,12 @@
 import { useTheme } from "../../hooks/useTheme";
 import { Button } from "./Button";
 
-function ButtonSecondary ({color = "blue",children, handleClick}){
+function ButtonSecondary ({
+  color = "blue",
+  children,
+  full,
+  loading,
+  handleClick}){
   const {isDark} = useTheme()
 
   const colors = isDark
@@ -14,8 +19,14 @@ function ButtonSecondary ({color = "blue",children, handleClick}){
 
 
   return (
-    <Button text={colors} border={colors} background={background} handleClick={handleClick} >
-      {children}
+    <Button
+      full={full} 
+      text={colors} 
+      border={colors} 
+      background={background} 
+      handleClick={handleClick}
+      loading={loading} >
+        {children}
     </Button>
   )
 }

@@ -11,12 +11,14 @@ function Input ({
   focus = "light-blue",
   value,
   name = "",
+  full = false,
   handleChange = () =>{},
   children}){
 
   const style = {
     color:  color[text] || "var(--gray2)",
     background:  color[background] || "none",
+    width: full ? "100%" : "300px",
     "border-radius": borderRadius ,
 
     "--border": color[border],

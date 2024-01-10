@@ -4,9 +4,6 @@
   display: flex;
   align-items: center;
   gap: var(--m);
-  width: 100%;
-  max-width: 400px;
-  min-width: 150px;
   outline: 2px solid var(--border);
 }
 

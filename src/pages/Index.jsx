@@ -5,6 +5,7 @@ import { useTheme } from '../hooks/useTheme'
 import LeftMenuContext from '../components/menus/LeftMenuContext'
 import BordedInput from '../components/inputs/BordedInput'
 import NormalInput from '../components/inputs/NormalInput'
+import SuccessAlert from "../components/alerts/SuccessAlert"
 import "./Index.css"
 
 function Index (){
@@ -36,14 +37,16 @@ function Index (){
           </p>
 
           <div className='buttons' >
-            <ButtonSecondary   >
+            <ButtonSecondary >
               <ArrowLeft/>
               regresar
             </ButtonSecondary>
-            <ButtonPrimary  >
+            <ButtonPrimary >
               ir a ver 
               <ArrowRight/>
             </ButtonPrimary>
+            <ButtonPrimary/>
+            
           </div>
 
           <div className="imputs">
@@ -55,6 +58,10 @@ function Index (){
             <BordedInput focus="green" placeholder="nombre *"  >
               <Home/>
             </BordedInput>
+
+            <SuccessAlert>
+              hola
+            </SuccessAlert>
           </div>
         </div>
       </section>

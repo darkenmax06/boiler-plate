@@ -1,29 +1,29 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Login from './pages/Login'
-import Index from './pages/Index'
+import { Suspense , lazy } from 'react'
+
+const Index = lazy(()=> import ('./pages/Index'))
+const Login = lazy(()=> import ('./pages/Login'))
 
 function App() {
-
-
   
   return (
-   <>
-    <Routes>
-      <Route path='/' element={ 
-        <Navigate to="/login" /> 
-      } />
+    <Suspense fallback={"cargando"}>
+      <Routes>
+        <Route path='/' element={ 
+          <Navigate to="/login" /> 
+        } />
 
-      <Route path='/login' element={
-        <Login/>
-      } />
+        <Route path='/login' element={
+          <Login/>
+        } />
 
 
-      <Route path='/index' element={
-        <Index/>
-      } />
-    </Routes>
-   </> 
+        <Route path='/index' element={
+          <Index/>
+        } />
+      </Routes>
+    </Suspense>
   )
 }
 
